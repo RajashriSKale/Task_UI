@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <form [formGroup]="editProductForm" (ngSubmit)="onSubmit()">
+                <h2>Edit Product</h2>
+                <div class="position-relative form-group">
+                    <label class="text-muted">Product Name</label>
+                    <input formControlName="Name" placeholder="Product Name" type="text" class="form-control">
+                   
+                </div>
+          
+                <br>
+                <div class="position-relative form-group">
+                    <label class="text-muted">Product Price</label>
+                   
+                    <input formControlName="Price" placeholder="Product Price" type="number" class="form-control">
+                </div>
+                <br>
+                <div class="position-relative form-group">
+
+                    <label class="text-muted">Quantity:</label>
+                   
+                    <input formControlName="Quantity" placeholder="Product Quantity" type="text" class="form-control">
+                </div>
+              
+                
+               
+              
+                
+                
+                <div class="col-lg-2 mx-auto mt-5">
+                    <input type="submit" value="Save Product" class="btn text-white ps-5 pe-5" 
+                           style="border-radius: 25px; background-color: #074da8dc;" 
+                           [disabled]="editProductForm.invalid">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

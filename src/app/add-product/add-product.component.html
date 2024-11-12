@@ -1,0 +1,41 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <form [formGroup]="productForm" (ngSubmit)="saveProject(productForm.value)">
+                <h2>Product Entry</h2>
+                <div class="position-relative form-group">
+                    <label class="text-muted">Product name</label> <span *ngIf="productForm.controls.Name.invalid && productForm.controls.Name.touched" class="text-danger">
+                        * Product Name is required.
+                    </span> 
+                    <input formControlName="Name" placeholder="Product Name" type="text" class="form-control">
+
+                    
+                </div>
+                <br>
+                <div class="position-relative form-group">
+                    <label class="text-muted">Product Price</label>
+                    <span *ngIf="productForm.controls. Price.invalid && productForm.controls. Price.touched" class="text-danger">
+                        * Product price is required.
+                    </span> 
+                    <input formControlName="Price" placeholder="Product Price" type="number" class="form-control">
+                </div>
+                <br>
+                <div class="position-relative form-group">
+
+                    <label class="text-muted">Quantity:</label>
+                    <span *ngIf="productForm.controls.Quantity.invalid && productForm.controls.Quantity.touched" class="text-danger">
+                        * Product Quantity: is required.
+                    </span> 
+                    <input formControlName="Quantity" placeholder="Product Quantity" type="text" class="form-control">
+                </div>
+                <br>
+                  <div class="col-lg-2 mx-auto mt-5">
+                    <input type="submit"  value="Saveproject" class="btn text-white align-content-end ps-5 pe-5"
+                        style="border-radius: 25px; background-color : #074da8dc;" >
+                </div>
+            </form>
+           
+        </div>
+    </div>
+</div>
